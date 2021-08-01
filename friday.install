@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file
+ * Defines the database tables used by this module.
+ */
+
+/**
+ * Implements hook_schema().
+ *
+ * Defines the database tables used by this module.
+ */
+function friday_schema() {
+  $schema['friday_visitor'] = [
+    'description' => 'The base table for entries of visitors.',
+    'fields' => [
+      'id' => [
+        'type' => 'serial',
+        'not null' => TRUE,
+        'unsigned' => TRUE,
+        'description' => 'The primary identifier for a user entry.',
+      ],
+      'ip_address' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'IP Address',
+      ],
+
+      'created' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'Timestamp when the entry was created.',
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  return $schema;
+}

@@ -1,0 +1,12 @@
+friday_js:
+  version: 1.x
+  js:
+    js/friday.js: {}
+    js/post-data.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/jquery.form
+    - core/drupal
+    - core/drupalSettings
+    - core/drupal.dialog.ajax

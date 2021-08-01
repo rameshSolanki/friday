@@ -1,0 +1,6 @@
+name: Friday
+type: module
+description: 'Friday Module'
+package: Custom
+version: 8.x
+core: 8.x

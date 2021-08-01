@@ -1,0 +1,15 @@
+friday.my_page:
+  path: '/friday'
+  defaults:
+    _controller: '\Drupal\friday\Controller\FridayController::friday'
+    _title: 'Test page'
+  requirements: 
+    _permission: 'access content'
+
+friday.form:
+ path: '/myform'
+ defaults:
+   _title: 'Friday form'
+   _form: '\Drupal\friday\Form\FridayForm'
+ requirements:
+   _permission: 'access content'    

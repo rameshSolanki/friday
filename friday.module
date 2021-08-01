@@ -1,0 +1,43 @@
+<?php
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
+
+function friday_page_attachments(array &$attachments) {
+$attachments['#attached']['library'][] = 'friday/friday_js';
+
+}
+
+function friday_theme($existing, $type, $theme, $path){
+	return [
+		'friday-block'=>[
+			'variables' => [
+				'data' => null,
+			],
+		],
+
+		'friday-visitor-block'=>[
+			'variables' => [
+				'visitors' => null,
+			],
+		],
+	];
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+// function friday_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+//   // Control fields access.
+//   if ('friday_form' == $form_id) {
+//     // $form['title']['#access'] = FALSE;
+//     // $form['field_ip_address']['#access'] = FALSE;
+//    $builtForm = \Drupal::formBuilder()->getForm('Drupal\friday\Form\FridayForm');
+//    $renderArray['form'] = $builtForm;
+
+//          return $renderArray;
+//   }
+// }
+
+
+?>

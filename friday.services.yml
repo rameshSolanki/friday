@@ -1,0 +1,4 @@
+services:
+  friday.data_handler:
+    class: \Drupal\friday\LoadData
+    arguments: ['@database']
